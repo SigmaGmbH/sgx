@@ -27,7 +27,7 @@ ENV SGX_SDK ${SGX_SDK}
 RUN set -eux; \
     pkg="as.ld.objdump.r4.tar.gz"; \
     url="${INTEL_SGX_URL}/sgx-linux/${LINUX_SGX_VERSION}/${pkg}"; \
-    sha256="85dcba642ee951686cb01479be377dc5da0b4f1597014679d1a29162f0dc8160"; \
+    sha256="1c4ab5814db1e79516985c6128405f92d131b0125e5f3fc5948e94a319e92985"; \
     wget "${url}" --progress=dot:giga; \
     echo "${sha256} *${pkg}" | sha256sum --strict --check -; \
     tar -xvf ${pkg} --directory /usr/local/bin/; \
