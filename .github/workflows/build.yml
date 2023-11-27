@@ -10,34 +10,31 @@ jobs:
   sgx:
     strategy:
       matrix:
-        version: [2.13.3, 2.14, 2.15.1, 2.16, 2.17.1, 2.18, 2.19]
+        version: [2.18, 2.19]
         distro: [focal]
         dockerfile: [Dockerfile]
-        image_name: [initc3/sgx]
+        image_name: [sigmagmbh/sgx]
         include:
-          - version: 2.13.3
-            distro: bionic
-            dockerfile: Dockerfile
-            image_name: initc3/sgx
           - version: 2.18
             distro: jammy
             dockerfile: Dockerfile
-            image_name: initc3/sgx
+            image_name: sigmagmbh/sgx
           - version: 2.19
             distro: jammy
             dockerfile: Dockerfile
-            image_name: initc3/sgx
+            image_name: sigmagmbh/sgx
+          - version: 2.19
+            distro: focal
+            dockerfile: Dockerfile
+            image_name: sigmagmbh/sgx
           - version: 2.19
             distro: buster
             dockerfile: Dockerfile
-            image_name: initc3/sgx
+            image_name: sigmagmbh/sgx
           - version: 2.19
             distro: buster
             dockerfile: aesm.Dockerfile
-            image_name: initc3/sgx-aesm
-        exclude:
-          - version: 2.19
-            distro: focal
+            image_name: sigmagmbh/sgx-aesm
 
     runs-on: ubuntu-latest
 
@@ -60,5 +57,5 @@ jobs:
           file: ./${{ matrix.version }}/${{ matrix.distro }}/${{ matrix.dockerfile }}
           builder: ${{ steps.buildx.outputs.name }}
           tags: |
-            initc3/sgx:${{ matrix.version }}-${{ matrix.distro }},
-            initc3/sgx:${{ matrix.version }}-${{ matrix.distro }}-${{ steps.vars.outputs.short_sha }}
+            sigmagmbh/sgx:${{ matrix.version }}-${{ matrix.distro }},
+            sigmagmbh/sgx:${{ matrix.version }}-${{ matrix.distro }}-${{ steps.vars.outputs.short_sha }}

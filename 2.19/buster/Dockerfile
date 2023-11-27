@@ -1,6 +1,6 @@
 FROM python:3.11.3-buster as sdk
 
-LABEL org.opencontainers.image.source=https://github.com/initc3/docker-linux-sgx/tree/master/2.19/debian-10
+LABEL org.opencontainers.image.source=https://github.com/sigmagmbh/sgx/tree/master/2.19/debian-10
 LABEL org.opencontainers.image.description="Linux SGX v2.19 for Debian 10 (buster)"
 LABEL org.opencontainers.image.licenses=BSD-3-Clause
 

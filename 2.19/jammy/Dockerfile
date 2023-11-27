@@ -1,6 +1,6 @@
 FROM ubuntu:22.04 as sdk
 
-LABEL org.opencontainers.image.source=https://github.com/initc3/docker-linux-sgx/tree/master/2.19/ubuntu-22.04
+LABEL org.opencontainers.image.source=https://github.com/sigmagmbh/sgx/tree/master/2.19/ubuntu-22.04
 LABEL org.opencontainers.image.description="Linux SGX v2.19 for Ubuntu 22.04 (jammy)"
 LABEL org.opencontainers.image.licenses=BSD-3-Clause
 

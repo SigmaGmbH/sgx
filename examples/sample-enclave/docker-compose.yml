@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   aesmd:
-    image: ghcr.io/initc3/sgx-aesm:2.19-buster
+    image: ghcr.io/sigmagmbh/sgx-aesm:2.19-buster
     volumes:
       - aesmd-socket:/var/run/aesmd
     devices:

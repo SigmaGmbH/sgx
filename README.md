@@ -16,13 +16,13 @@ SGX version | OS | SDK | PSW | SGX SSL
 Please refer to the official repository,
 https://github.com/intel/linux-sgx, for other versions.
 
-Images are available on under [ghcr.io/initc3/linux-sgx][ghcr.io/initc3/linux-sgx].
+Images are available on under [ghcr.io/sigmagmbh/linux-sgx][ghcr.io/sigmagmbh/linux-sgx].
 
 
 ## Usage
 
 ```dockerfile
-FROM ghcr.io/initc3/sgx:2.19-buster
+FROM ghcr.io/sigmagmbh/sgx:2.19-buster
 
 # ...
 ```
@@ -38,7 +38,7 @@ version: '3.9'
 services:
 
   aesmd:
-    image: ghcr.io/initc3/sgx-aesm:2.19-buster
+    image: ghcr.io/sigmagmbh/sgx-aesm:2.19-buster
     volumes:
       - aesmd-socket:/var/run/aesmd
     devices:
@@ -83,4 +83,4 @@ SGX version | OS | SDK | PSW | SGX SSL
 2.1.3 | Ubuntu 16.04 | :heavy_check_mark: | :x: | :x:
 
 
-[ghcr.io/initc3/linux-sgx]: https://github.com/initc3/docker-linux-sgx/pkgs/container/linux-sgx
+[ghcr.io/sigmagmbh/linux-sgx]: https://github.com/sigmagmbh/sgx/pkgs/container/linux-sgx
