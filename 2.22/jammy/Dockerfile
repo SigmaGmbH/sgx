@@ -35,7 +35,7 @@ RUN set -eux; \
     version="2.22.100.3"; \
     pkg="sgx_linux_x64_sdk_${version}.bin"; \
     url="${INTEL_SGX_URL}/sgx-linux/${LINUX_SGX_VERSION}/distro/${distro}/${pkg}"; \
-    sha256="7f6d8a0ece65757ccd714c46c0e8baa7f1c6a8428bc7b85bf42b5fd834bf19d0"; \
+    sha256="941bd4e1c2b7c982688f4e6c6438715b18bf1ae4f2bf3c6c8d420ed792ab79c6"; \
     wget -O sdk.bin "${url}" --progress=dot:giga; \
     echo "$sha256 *sdk.bin" | sha256sum --strict --check -; \
     chmod +x sdk.bin; \
