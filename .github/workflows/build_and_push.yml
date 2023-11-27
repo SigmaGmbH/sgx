@@ -18,10 +18,6 @@ jobs:
         dockerfile: [Dockerfile]
         image_name: [sigmagmbh/sgx]
         include:
-          - version: 2.13.3
-            distro: bionic
-            dockerfile: Dockerfile
-            image_name: sigmagmbh/sgx
           - version: 2.18
             distro: jammy
             dockerfile: Dockerfile
