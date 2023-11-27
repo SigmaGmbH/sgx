@@ -13,7 +13,7 @@ jobs:
   sgx:
     strategy:
       matrix:
-        version: [2.18, 2.19]
+        version: [2.18, 2.19, 2.22]
         distro: [focal]
         dockerfile: [Dockerfile]
         image_name: [sigmagmbh/sgx]
@@ -38,6 +38,14 @@ jobs:
             distro: buster
             dockerfile: aesm.Dockerfile
             image_name: sigmagmbh/sgx-aesm
+          - version: 2.22
+            distro: focal
+            dockerfile: Dockerfile
+            image_name: sigmagmbh/sgx
+          - version: 2.22
+            distro: jammy
+            dockerfile: Dockerfile
+            image_name: sigmagmbh/sgx
 
     runs-on: ubuntu-latest
 
