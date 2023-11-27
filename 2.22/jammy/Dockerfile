@@ -108,7 +108,7 @@ RUN set -eux; \
     \
     pkg="openssl-${OPENSSL_VERSION}.tar.gz"; \
     openssl_url="https://www.openssl.org/source/${pkg}"; \
-    sha256="d7939ce614029cdff0b6c20f0e2e5703158a489a72b2507b8bd51bf8c8fd10ca"; \
+    sha256="1761d4f5b13a1028b9b6f3d4b8e17feb0cedc9370f6afe61d7193d2cdce83323"; \
     wget ${openssl_url} -P openssl_source; \
     echo "${sha256} openssl_source/${pkg}" | sha256sum --strict --check -; \
     \
