@@ -1,7 +1,7 @@
 FROM ubuntu:18.04 as sdk
 
 LABEL org.opencontainers.image.source=https://github.com/sigmagmbh/sgx/tree/master/2.19/ubuntu-18.04
-LABEL org.opencontainers.image.description="Linux SGX v2.19 for Ubuntu 18.04 (focal)"
+LABEL org.opencontainers.image.description="Linux SGX v2.19 for Ubuntu 18.04 (bionic)"
 LABEL org.opencontainers.image.licenses=BSD-3-Clause
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -54,7 +54,7 @@ WORKDIR ${SGX_SDK}
 FROM sdk as psw
 
 RUN set -eux; \
-    distro="focal"; \
+    distro="bionic"; \
     url="${INTEL_SGX_URL}/sgx_repo/ubuntu"; \
     echo "deb [arch=amd64] ${url} ${distro} main" \
                 | tee /etc/apt/sources.list.d/intel-sgx.list; \
