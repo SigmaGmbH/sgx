@@ -31,6 +31,10 @@ jobs:
             dockerfile: Dockerfile
             image_name: sigmagmbh/sgx
           - version: 2.19
+            distro: bionic
+            dockerfile: Dockerfile
+            image_name: sigmagmbh/sgx
+          - version: 2.19
             distro: jammy
             dockerfile: Dockerfile
             image_name: sigmagmbh/sgx
