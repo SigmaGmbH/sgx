@@ -55,6 +55,10 @@ jobs:
             dockerfile: Dockerfile
             image_name: sigmagmbh/sgx
           - version: 2.23
+            distro: focal
+            dockerfile: Dockerfile
+            image_name: sigmagmbh/sgx
+          - version: 2.23
             distro: jammy
             dockerfile: Dockerfile
             image_name: sigmagmbh/sgx
