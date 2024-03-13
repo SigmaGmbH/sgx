@@ -17,7 +17,7 @@ jobs:
   sgx:
     strategy:
       matrix:
-        version: [2.18, 2.19, 2.22]
+        version: [2.18, 2.19, 2.22, 2.23]
         distro: [focal]
         dockerfile: [Dockerfile]
         image_name: [sigmagmbh/sgx]
@@ -51,6 +51,10 @@ jobs:
             dockerfile: Dockerfile
             image_name: sigmagmbh/sgx
           - version: 2.22
+            distro: jammy
+            dockerfile: Dockerfile
+            image_name: sigmagmbh/sgx
+          - version: 2.23
             distro: jammy
             dockerfile: Dockerfile
             image_name: sigmagmbh/sgx
