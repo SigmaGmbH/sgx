@@ -59,8 +59,12 @@ RUN set -eux; \
     apt-get install -y --no-install-recommends \
                 libsgx-headers \
                 libsgx-ae-epid \
+                libsgx-ae-id-enclave \
                 libsgx-ae-le \
                 libsgx-ae-pce \
+                libsgx-ae-qe3 \
+                libsgx-ae-qve \
+                libsgx-aesm-ecdsa-plugin \
                 libsgx-aesm-epid-plugin \
                 libsgx-aesm-launch-plugin \
                 libsgx-aesm-pce-plugin \
@@ -69,10 +73,18 @@ RUN set -eux; \
                 libsgx-enclave-common-dev \
                 libsgx-epid \
                 libsgx-epid-dev \
+                libsgx-dcap-default-qpl \
+                libsgx-dcap-default-qpl-dev \
+                libsgx-dcap-ql \
+                libsgx-dcap-ql-dev \
+                libsgx-dcap-quote-verify \
+                libsgx-dcap-quote-verify-dev \
                 libsgx-launch \
                 libsgx-launch-dev \
                 libsgx-quote-ex \
                 libsgx-quote-ex-dev \
+                libsgx-qe3-logic \
+                libsgx-pce-logic \
                 libsgx-uae-service \
                 libsgx-urts \
                 sgx-aesm-service; \
